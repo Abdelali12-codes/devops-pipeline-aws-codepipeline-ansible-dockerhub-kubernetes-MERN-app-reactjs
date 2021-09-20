@@ -1,0 +1,22 @@
+- name: build docker image and push it to dockr hub
+  hosts: localhost
+  become: yes 
+  become_user: abdelali
+  
+
+  tasks:
+  - name: build image
+    command: docker build -t react-devops .
+    args:
+       chdir: /home/abdelali/devops/reactjs/nginx
+
+  - name: tag the image
+    command: docker tag react-devops abdelalidocker/react-devops:latest
+
+
+  - name: push the built image to dockerhub
+    command: docker push abdelalidocker/react-devops:latest
+
+
+  - name: delete the built image and the taged one
+    command: docker rmi react-devops abdelalidocker/react-devops:latest

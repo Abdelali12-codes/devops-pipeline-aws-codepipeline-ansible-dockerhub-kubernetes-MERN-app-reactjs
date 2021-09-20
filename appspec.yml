@@ -1,0 +1,17 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/abdelali/devops/reactjs
+hooks:
+    AfterInstall:
+       - location: scripts/stop-containers.sh
+         timeout: 300
+         runas: root
+    ApplicationStart:
+       - location: scripts/start-containers.sh
+         timeout: 300
+         runas: abdelali
+
+    
+       
