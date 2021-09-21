@@ -1,0 +1,22 @@
+- name: build docker image and push it to dockr hub
+  hosts: localhost
+  become: yes 
+  become_user: abdelali
+  
+
+  tasks:
+  - name: build image
+    command: docker build -t nodejs-devops .
+    args:
+       chdir: /home/abdelali/devops/nodeserver
+
+  - name: tag the image
+    command: docker tag nodejs-devops abdelalidocker/nodejs-devops:latest
+
+
+  - name: push the built image to dockerhub
+    command: docker push abdelalidocker/nodejs-devops:latest
+
+
+  - name: delete the built image and the taged one
+    command: docker rmi nodejs-devops abdelalidocker/nodejs-devops:latest
