@@ -5,13 +5,13 @@ files:
     destination: /home/abdelali/devops/reactjs
 hooks:
     AfterInstall:
-       - location: scripts/stop-containers.sh
+       - location: scripts/copy-files.sh
          timeout: 300
          runas: root
-    ApplicationStart:
-       - location: scripts/start-containers.sh
-         timeout: 300
-         runas: abdelali
+    # ApplicationStart:
+    #    - location: scripts/run-ansible-playbook.sh
+    #      timeout: 300
+    #      runas: abdelali
 
     
        

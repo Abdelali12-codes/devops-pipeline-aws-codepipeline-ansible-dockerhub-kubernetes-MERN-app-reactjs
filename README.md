@@ -4,6 +4,17 @@
 
 [My Youtube channel](https://www.youtube.com/channel/UCmJ3RnxnLnx-ZfnyE6A5jaA)
 
+# install the codedeploy agent
+
+```
+sudo yum install ruby -y
+sudo yum install wget -y
+cd /home/abdelali
+wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install
+chmod +x ./install
+sudo ./install auto
+```
+
 # Set up the kubernetes cluster
 
 ### 1. run the following command on the both instances you created above
