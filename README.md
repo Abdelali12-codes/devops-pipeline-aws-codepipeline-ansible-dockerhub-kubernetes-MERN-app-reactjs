@@ -4,6 +4,18 @@
 
 [My Youtube channel](https://www.youtube.com/channel/UCmJ3RnxnLnx-ZfnyE6A5jaA)
 
+# setup jenkins on ubuntu ec2 instance image
+
+```
+sudo apt-get update
+sudo apt-get install openjdk-8-jdk -y
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
+ /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins -y
+```
+
 # install the codedeploy agent
 
 ```
