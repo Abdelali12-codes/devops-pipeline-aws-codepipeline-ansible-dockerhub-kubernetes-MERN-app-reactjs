@@ -1,4 +1,4 @@
-cd /home/abdelali/devops/reactjs
+cd /home/abdelali/reactjs
 sudo cp -r build/* nginx
 
-sudo cp ansible/deployments-services.yml /home/abdelali/devops
+sudo cp ansible/deployments-services.yml /home/abdelali/
