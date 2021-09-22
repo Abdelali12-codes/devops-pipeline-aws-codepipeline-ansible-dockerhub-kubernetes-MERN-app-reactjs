@@ -14,6 +14,7 @@ sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
  /etc/apt/sources.list.d/jenkins.list'
 sudo apt-get update
 sudo apt-get install jenkins -y
+sudo service jenkins start
 ```
 
 # install the codedeploy agent
@@ -41,6 +42,7 @@ sudo apt-get update -y
 sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 sudo apt install docker.io -y
+sudo service docker start
 
 ```
 
@@ -64,7 +66,7 @@ kind: ClusterConfiguration
 apiVersion: kubeadm.k8s.io/v1beta3
 kubernetesVersion: v1.22.0
 networking:
-podSubnet: 10.244.0.0/16
+    podSubnet: 10.244.0.0/16
 
 ---
 

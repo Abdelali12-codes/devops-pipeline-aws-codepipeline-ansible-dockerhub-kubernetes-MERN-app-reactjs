@@ -1,3 +1,7 @@
+
+
+---
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -19,13 +23,19 @@ spec:
         - containerPort: 27017
         volumeMounts:
           - mountPath: /data/db
-            name: host-volume
+            name: ebs-volume
       
       volumes:
-        - name: host-volume
-          hostPath:
-            path: /home/ubuntu/volumes
-            type: DirectoryOrCreate
+        - name: ebs-volume
+          persistentVolumeClaim:
+          claimName: my-pvc
+          # awsElasticBlockStore:
+          #    volumeID: vol-0add61f0ed0022fc7
+          #    fsType: ext4
+        # - name: host-volume
+        #   hostPath:
+        #     path: /home/ubuntu/volumes
+        #     type: DirectoryOrCreate
                                           # this the path on the worker node where your web site resie
 ---
 
@@ -62,7 +72,7 @@ spec:
     spec:
       containers:
       - name: node-app
-        image: abdelalidocker/nodejs-devops:latest
+        image: abdelalidocker/jenkins-ansible-nodejs:latest
         ports:
         - containerPort: 3001
 
@@ -102,7 +112,7 @@ spec:
     spec:
       containers:
       - name: nginx-app
-        image: abdelalidocker/react-devops:latest
+        image: abdelalidocker/jenkins-ansible-reactjs:latest
         ports:
         - containerPort: 80
 
