@@ -1,4 +1,4 @@
-apiVersion: kubeadm.k8s.io/v1beta1
+apiVersion: kubeadm.k8s.io/v1beta2
 kind: ClusterConfiguration
 kubernetesVersion: v1.22.0
 apiServer:
@@ -7,17 +7,20 @@ apiServer:
 controllerManager:
   extraArgs:
     cloud-provider: aws
-    address: 0.0.0.0
+    # address: 0.0.0.0
 networking:
   podSubnet: 10.244.0.0/16
 scheduler:
   extraArgs:
-    address: 0.0.0.0
+    # address: 0.0.0.0
 ---
-apiVersion: kubeadm.k8s.io/v1beta1
+apiVersion: kubeadm.k8s.io/v1beta2
 kind: InitConfiguration
 nodeRegistration:
   kubeletExtraArgs:
     cloud-provider: aws
 
 ---
+kind: KubeletConfiguration
+apiVersion: kubelet.config.k8s.io/v1beta1
+cgroupDriver: cgroupfs
