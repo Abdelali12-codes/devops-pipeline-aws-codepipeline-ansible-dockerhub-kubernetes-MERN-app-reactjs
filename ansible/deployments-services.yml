@@ -90,7 +90,7 @@ spec:
     spec:
       containers:
       - name: node-app
-        image: abdelalidocker/nodejs-devops:latest
+        image: abdelalidocker/nodejs-pipeline:latest
         ports:
         - containerPort: 3001
 
@@ -130,7 +130,7 @@ spec:
     spec:
       containers:
       - name: nginx-app
-        image: abdelalidocker/reactjs-devops:latest
+        image: abdelalidocker/reactjs-pipeline:latest
         ports:
         - containerPort: 80
 

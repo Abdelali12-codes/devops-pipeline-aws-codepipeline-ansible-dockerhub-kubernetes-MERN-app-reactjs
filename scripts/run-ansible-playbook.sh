@@ -4,4 +4,4 @@ ansible-playbook ansible-build-nodejs-image.yml
 echo "the ansible build nodejs image finished"
 ansible-playbook ansible-build-reactjs-image.yml 
 echo "the ansible build reactjs image finished"
-# ansible-playbook ansible-run-cluster.yml
+ansible-playbook ansible-run-cluster.yml
