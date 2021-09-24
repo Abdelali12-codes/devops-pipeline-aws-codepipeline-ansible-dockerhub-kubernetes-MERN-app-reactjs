@@ -8,7 +8,7 @@
   - name: build image
     command: docker build -t nodejs-devops .
     args:
-       chdir: /home/abdelali/devops/nodeserver
+       chdir: /home/ali/devops/nodeserver
 
   - name: tag the image
     command: docker tag nodejs-devops abdelalidocker/nodejs-devops:latest
