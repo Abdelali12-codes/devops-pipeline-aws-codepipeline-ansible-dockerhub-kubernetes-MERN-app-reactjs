@@ -10,7 +10,7 @@ hooks:
          runas: abdelali
     ApplicationStart:
        - location: scripts/run-ansible-playbook.sh
-         timeout: 600
+         timeout: 3600
          runas: abdelali
 
     
