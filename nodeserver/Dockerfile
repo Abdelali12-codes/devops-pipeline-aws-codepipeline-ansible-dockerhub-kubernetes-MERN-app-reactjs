@@ -8,6 +8,6 @@ RUN npm install
 
 EXPOSE 3001
 
-RUN npm start
+ENTRYPOINT npm start
 
 
