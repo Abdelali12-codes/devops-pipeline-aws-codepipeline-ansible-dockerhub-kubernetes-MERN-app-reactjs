@@ -8,10 +8,10 @@ hooks:
        - location: scripts/copy-files.sh
          timeout: 300
          runas: root
-    # ApplicationStart:
-    #    - location: scripts/run-ansible-playbook.sh
-    #      timeout: 300
-    #      runas: abdelali
+    ApplicationStart:
+       - location: scripts/run-ansible-playbook.sh
+         timeout: 300
+         runas: abdelali
 
     
        
