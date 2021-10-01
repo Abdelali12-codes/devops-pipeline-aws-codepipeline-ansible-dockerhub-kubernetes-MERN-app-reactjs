@@ -121,3 +121,7 @@ kubectl apply -f https://docs.projectcalico.org/v3.3/getting-started/kubernetes/
 
 # The lab architecture
 ![alt text](https://github.com/Abdelali12-codes/devops-pipeline-aws-codepipeline-ansible-dockerhub-kubernetes-MERN-app-reactjs/blob/master/aws-pipeline-kubernetes.png?raw=true)
+
+# demo on my youtube
+
+[Demo](https://youtu.be/mPReiiBd_dE)
