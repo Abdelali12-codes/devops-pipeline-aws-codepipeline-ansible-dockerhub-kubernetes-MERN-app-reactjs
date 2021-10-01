@@ -1,6 +1,6 @@
 # devops-pipeline-aws-codepipeline-ansible-dockerhub-kubernetes-MERN-app
 
-- for the tutorial pratique check my youtube channel
+- for the partique tutorial check my youtube channel
 
 [My Youtube channel](https://www.youtube.com/channel/UCmJ3RnxnLnx-ZfnyE6A5jaA)
 
@@ -120,8 +120,9 @@ kubectl apply -f https://docs.projectcalico.org/v3.3/getting-started/kubernetes/
 ```
 
 # The lab architecture
+
 ![alt text](https://github.com/Abdelali12-codes/devops-pipeline-aws-codepipeline-ansible-dockerhub-kubernetes-MERN-app-reactjs/blob/master/aws-pipeline-kubernetes.png?raw=true)
 
 # demo on my youtube
 
-[Demo](https://youtu.be/mPReiiBd_dE)
+[Lab Demo](https://youtu.be/mPReiiBd_dE)
